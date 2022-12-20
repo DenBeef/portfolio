@@ -27,6 +27,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 
+    <!-- Javascript -->
+    <link 
+      rel="stylesheet" 
+      href="assets/js/app.js">
+
     <title>Denis Cleary | Software Developer</title>
 </head>
 <body>
@@ -81,46 +86,58 @@
 
     <section class="skills" id="skills">
       <h2 class="skill-header">My Top Skills</h2>
-
+          <!-- first-set animate__animated animate__pulse -->
       <div class="skills-wrapper">
-        <div class="first-set animate__animated animate__pulse">
+        <div class="">
           <img
             src="assets/icons/icons8-html-5.svg"
             alt=""
             loading="lazy"
+            id="html-icon"
+            onmouseover="mouseOver(this)"
             class="icon icon-card"
           />
           <img
             src="assets/icons/icons8-css3.svg"
             alt=""
             loading="lazy"
+            id="css-icon"
+            onmouseover="mouseOver(this)"
             class="icon icon-card"
           />
           <img
             src="assets/icons/icons8-javascript-logo.svg"
             alt=""
             loading="lazy"
+            id="js-icon"
+            onmouseover="mouseOver(this)"
             class="icon icon-card"
           />
         </div>
 
-        <div class="second-set animate__animated animate__pulse">
+        <div class="">
           <img
             src="assets/icons/icons8-adobe-photoshop.svg"
             alt=""
             loading="lazy"
+            id="ps-icon"
+            onmouseover="mouseOver(this)"
             class="icon icon-card"
           />
           <img
             src="assets/icons/icons8-python.svg"
             alt=""
             loading="lazy"
+            id="py-icon"
+            onmouseover="mouseOver(this)"
             class="icon icon-card"
           />
           <img
             src="assets/icons/icons8-git.svg"
             alt=""
             loading="lazy"
+            id="git-icon"
+            onmouseover="mouseOver(this)"
             class="icon icon-card"
           />
         </div>
@@ -178,17 +195,102 @@
       </div>
     </section>
 
+    <section class="contact" id="contact">
+      <h2>Get In Touch With Me</h2>
+      <div class="contact-form-container">
+        <div class="contact-form">
+          <form action="https://formspree.io/f/xvonproj" method="POST">
+            <div class="form-control">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="sender-name"
+                placeholder="Enter Your Name"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="sender-email"
+                placeholder="Enter Your Email"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                cols="60"
+                rows="10"
+                placeholder="Enter Your Message"
+                name="message"
+                class="input-field"
+                required
+              ></textarea>
+            </div>
+            <input
+              type="submit"
+              value="Submit"
+              id="submit-btn"
+              class="submit-btn"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="socials">
+      <a href="https://twitter.com/DenBeef" target="_blank">
+        <img
+          src="assets/icons/icons8-twitter.gif"
+          alt="Twitter"
+          loading="lazy"
+          class="socicon"/>
+        </a>
+      <a href="https://www.instagram.com/denbeef08/" target="_blank"
+        ><img
+          src="assets/icons/icons8-instagram.gif"
+          alt="Instagram"
+          loading="lazy"
+          class="socicon"/>
+      </a>
+      <a href="https://www.linkedin.com/in/denis-cleary/" target="_blank">
+        <img
+          src="assets/icons/icons8-linkedin-circled.gif"
+          alt="Linkedin"
+          loading="lazy"
+          class="socicon"/>
+        </a>
+      <a href="https://github.com/DenBeef" target="_blank">
+        <img src="assets/icons/icons8-github.gif" alt="Github" class="socicon"/>
+      </a>
+    </div>
+
+      <footer>
+        <p class="copy">
+          Built with &#x2661; by
+          <a href="https://twitter.com/koladechris" target="_blank"
+            >Denis Cleary</a
+          >
+        </p>
+      </footer>
+
     <!-- Website scripts -->
     <script src="assets/js/app.js"></script>
 
     <!-- Ion icons scripts -->
     <script
       type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script
       nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
