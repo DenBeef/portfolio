@@ -6,6 +6,7 @@
     --bold-font: 900;
     --bolder-font: 900;
     --bg-color: #fcfcfc;
+    --bg-colora: #fcfcfccc;
     --primary-color: #4756df;
     --secondary-color: #ff7235;
     --primary-shadow: #8b8eaf;
@@ -284,9 +285,117 @@ nav ul li {
     height: 2rem;
   }
 
+  .scroll-up {
+    position: fixed;
+    right: 0.5%;
+    bottom: 3%;
+    cursor: pointer;
+  }
+  
+  .up-arrow {
+    width: 3rem;
+    height: 3rem;
+  }
+
   footer {
     background-color: var(--bg-color);
     padding: 1.25rem;
     text-align: center;
     margin: 2rem 0 0;
   }
+
+  @media screen and (max-width: 720px) {
+    /*changes reflects on screen with a width of 720px and below*/
+    nav {
+        padding: 1.5rem 1rem;
+      }
+
+    nav ul {
+    position: fixed;
+    background-color: var(--bg-colora);
+    flex-direction: column;
+    top: 86px;
+    left: 20%;
+    width: 60%;
+    text-align: center;
+    transform: translateX(150%);
+    transition: transform 0.5s ease-in;
+    }
+
+    nav ul li {
+    margin: 8px;
+    }
+
+    .burger-menu {
+        display: block;
+      }
+    
+    nav ul.show {
+    transform: translateX(0);
+    }
+
+    .hero {
+    margin-top: -2rem;
+    flex-direction: column;
+    gap: 0;
+    }
+
+    .hero img {
+        height: 30rem;
+        width: 30rem;
+    }
+
+    .bio {
+    margin-top: -2rem;
+    width: 20.5rem;
+    }
+
+    .more-about {
+        margin-top: 2rem;
+        padding: 1rem 3.5rem;
+    }
+    
+    .more-about h2 {
+    text-align: center;
+    }
+
+    .more-about p {
+    text-align: justify;
+    }
+
+    .icon {
+        width: 7.875rem;
+        height: 7.25rem;
+    }
+
+    .projects-container {
+        flex-direction: column;
+    }
+    
+    .project-container {
+    width: 20.875rem;
+    }
+
+    .contact-form-container {
+        max-width: 23.75rem;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .hero img {
+      height: 37.5rem;
+      width: 23rem;
+    }
+  
+    .bio {
+      width: 18.3rem;
+    }
+  
+    .project-container {
+      width: 17.875rem;
+    }
+  
+    .contact-form-container {
+      max-width: 17.75rem;
+    }
+  } 
